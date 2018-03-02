@@ -1,0 +1,23 @@
+/*
+    -----------------------------------------
+    -----------------------------------------
+                RESET
+    -----------------------------------------
+    -----------------------------------------
+*/
+
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.contacts,
+.linkedin,
+.icons {
+    max-width: 2em;
+}

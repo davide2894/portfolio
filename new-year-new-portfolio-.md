@@ -6,7 +6,8 @@ During the past few days I have been working on the design while hitting my head
 
 I must have been struct by a lightening last evening because "Whatch out, whatch out!" I pulled (finally) a mockup outta nowhere (any wrestling fan?).
 
-This is what I came up with. It's something I like!
+This is what I came up with.
 
 !!! LINKS OF MOCKUPS !!!
+
 
