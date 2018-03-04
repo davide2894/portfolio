@@ -55,3 +55,11 @@ Next is setting project section:
 5:38pm - collapsible is at a good point, gonna take a break and come back to add animations.
 
 8:50 pm - I'm tired, need to refresh mentally. Tomorrow the first thing to do is to add animations.
+
+## Day 4 - March 4 2018
+8:11am - it's Sunday, a new day I use to life my life mission to the fullest. Let's go.
+As of yesterday's last update: let's add animation to the collapsibles.
+
+11:16am - now I need to create an overlay with two buttons:
+    * visit
+    * code
