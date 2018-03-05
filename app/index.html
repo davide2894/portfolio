@@ -18,7 +18,8 @@
         <section class="intro">
             <p class="intro__text">
                 Hi I'm Davide
-                <br>Front-End Developer
+                <br>Front-End
+                <br>Developer
             </p>
             <i class="fa fa-arrow-circle-down intro__arrow fa-4x"></i>
         </section>
@@ -28,15 +29,12 @@
             <div class="collapsible collapsible--container" id="p">
                 <p class="collapsible__title">Projects.</p>
                 <div class="collapsible__content content-container projects">
-                    <div class="project project--uw">
-                        <img src="assets/responsive/udacity-wall-mockup-300px.webp" alt="project mockup" class="project__img project--uw__img">
-                        <div class="project--overlay">
-                            <p class="project--overlay__text-website">
-                                <a href="https://brushed.it"></a>
-                                Website
-                            </p>
+                    <!-- link to project page -->
+                    <a class="project--link" href="#">
+                        <div class="project project--uw">
+                            <img class="project__img" src="assets/responsive/udacity-wall-500px.webp" alt="project mockup">
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="collapsible collapsible--container skills" id="s">
@@ -78,30 +76,41 @@
                     <p class="collapsible__title">Blog.</p>
                 </div>
             </a>
-            <div class="collapsible collapsible--container" id="a">
+            <div class="collapsible collapsible--container about" id="a">
                 <p class="collapsible__title">About.</p>
                 <div class="collapsible__content content-container content--about">
-                    <p class="content--about__text">
-                        My name is Davide Iaiunese, I'm a meticoulous self-taught developer born and raised in Caserta, Italy. Besides development, my main passion are self-impovement, cinema and books. In March 2017 I found in code the key to personal freedom. I was astonished at how it fits who I am. In September 2017 I decided to pursue a career in web development. A month later I was selected as receipt of the Google Developer scholarship - phase 1 - along with other 20.000 people. On February 14 2018 I was lucky and grateful to be among the 1% who earned the full, six months long scholarship. It's teaching me to build responsive websites by using HTML, CSS, JavaScript and its libraries such as jQuery and React.
+                    <div class="me-container">
+                        <img src="assets/me.png" alt="" class="me">
+                    </div>
+                    <div class="content--about__text">
+                        <p>My name is Davide Iaiunese, I'm a meticoulous self-taught developer born and raised in Caserta, Italy. Besides development, my main passion are self-impovement, cinema and books.</p>
+                        <p>In March 2017 I found in code the key to personal freedom. I was astonished at how it fits who I am.</p>
+                        <p>In September 2017 I decided to pursue a career in web development. A month later I was selected as receipt of the Google Developer scholarship - phase 1 - along with other 20.000 people.</p>
+                        <p>On February 14 2018 I was lucky and grateful to be among the 1% who earned the full, six months long scholarship. It's teaching me to build responsive websites by using HTML, CSS, JavaScript and its libraries such as jQuery and React.</p>
+                        
+                
 
-                    </p>
+                    </div>
                 </div>
             </div>
 
         </main>
 
-        <footer class="footer footer-container">
-            <div class="footer--content">
-                <p class="footer--content__title">Say hi.</p>
-                <p class="footer--content__text">
+        <footer class="footer footer-container container">
+            <div class="footer--content collapsible--container">
+                <p class="footer--content__title collapsible__title">Say hi.</p>
+                <div class="collapsible__content">
+                              <p class="footer--content__text">
                     I'm always looking for new exciting challenges. Do you have a minute?<br>Say Hi!
                 </p>
                 <div class="footer--content__icons">
-                    <i class="fa fa-github"></i>
-                    <i class="fa fa-linkedin"></i>
-                    <i class="fa fa-envelope-square"></i>
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-github icon"></i>
+                    <i class="fa fa-linkedin icon"></i>
+                    <i class="fa fa-envelope-square icon"></i>
+                    <i class="fa fa-twitter icon"></i>
                 </div>
+                </div>
+      
             </div>
         </footer>
 

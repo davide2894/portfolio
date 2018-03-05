@@ -63,3 +63,6 @@ As of yesterday's last update: let's add animation to the collapsibles.
 11:16am - now I need to create an overlay with two buttons:
     * visit
     * code
+    
+## Day 5 - March 5 2018
+I think mobile version it's done. Now I need to make a version for tables and another one for desktop
