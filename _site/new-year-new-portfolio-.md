@@ -66,25 +66,3 @@ As of yesterday's last update: let's add animation to the collapsibles.
     
 ## Day 5 - March 5 2018
 I think mobile version it's done. Now I need to make a version for tables and another one for desktop
-
-## Day 7 - March 7 2018
-9:26am - I was not satisfied with how it looked so I spent yesterday and last hour and a half to rebuild it. What's left to do:
-//* add links to navbar items 
-//* remove hover effect from mobile versions
-//* add links to icons: each to its main explanatory page
-//* add git, github devicons
-
-7:40pm - desktop version idea: have all pages at height 100vh and switch between them with scroll animations:
-* portfolio: 
-    * full page 
-    * header huge background
-* blog:
-    * full page
-    * full logo as header
-    * desdcription in small, lato font
-* about: 
-    * full page
-    * split:
-        *left: pic
-        *right: description + skills
-scroll animation that changes the background color smoothly like johathan
