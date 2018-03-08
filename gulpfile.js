@@ -19,15 +19,15 @@ var runSequence = require('run-sequence');
 gulp.task('browserSync', function () {
     browserSync({
         server: {
-            baseDir: 'app'
+            baseDir: ''
         }
     })
 })
 
 gulp.task('sass', function () {
-    return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+    return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
         .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-        .pipe(gulp.dest('app/css')) // Outputs it in the css folder
+        .pipe(gulp.dest('css')) // Outputs it in the css folder
         .pipe(browserSync.reload({ // Reloading with Browser Sync
             stream: true
         }));
@@ -35,14 +35,14 @@ gulp.task('sass', function () {
 
 // Watchers
 gulp.task('watch', function () {
-    gulp.watch('app/scss/**/*.scss', ['sass']).on("change", browserSync.reload);
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('scss/**/*.scss', ['sass']).on("change", browserSync.reload);
+    gulp.watch('*.html', browserSync.reload);
+    gulp.watch('js/**/*.js', browserSync.reload);
 })
 
 // Responsive images
 gulp.task("images:responsive", function () {
-    return gulp.src(["app/assets/*.{png,jpg,webp}"])
+    return gulp.src(["assets/*.{png,jpg,webp}"])
         .pipe($.responsive({
             // resize all JPGs to different resolutions
             "*.webp": [{
@@ -91,7 +91,7 @@ gulp.task("images:responsive", function () {
             // Strip all metadata
             widthMetadata: false,
         }))
-        .pipe(gulp.dest("app/assets/responsive"));
+        .pipe(gulp.dest("ssets/responsive"));
 });
 
 // Optimization Tasks 
@@ -100,7 +100,7 @@ gulp.task("images:responsive", function () {
 // Optimizing CSS and JavaScript 
 gulp.task('useref', function () {
 
-    return gulp.src('app/*.html')
+    return gulp.src('*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', cssnano()))
@@ -109,7 +109,7 @@ gulp.task('useref', function () {
 
 // Optimizing Images 
 gulp.task('images:minify', function () {
-    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+    return gulp.src('images/**/*.+(png|jpg|jpeg|gif|svg)')
         // Caching images that ran through imagemin
         .pipe(imagemin({
             interlaced: true,
@@ -131,7 +131,7 @@ gulp.task("images:compress", function () {
 
 // Copying fonts 
 gulp.task('fonts', function () {
-    return gulp.src('app/fonts/**/*')
+    return gulp.src('fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
 })
 
