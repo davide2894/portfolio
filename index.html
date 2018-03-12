@@ -9,13 +9,11 @@
     <link rel="icon" href="assets/favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Lato|Bungee+Shade|Libre+Baskerville" rel="stylesheet">
     <script src="https://use.fontawesome.com/3eb9080354.js"></script>
-    <script src="js/index.js"></script>
 </head>
 
 <body>
     <div class="page-wrapper">
-
-        <section class="intro">
+        <section class="intro fade-in">
             <div class="intro--container">
                 <div class="intro__text--container">
                     <p class="intro__text intro__text--l1">
@@ -38,20 +36,20 @@
                     <i class="fa fa-twitter icon fa-2x"></i>
                 </a>
                 </div>
-                <!-- <nav class="navbar">
+
+                <nav class="navbar">    
                     <ul class="navbar--list">
-                
-                        <a href="#projects">
+                        <a href="#" onclick="smoothScroll('projects')">
                             <li class="navbar--list__item">Projects</li>
                         </a>
-                        <a href="#blog">
+                        <a href="#" onclick="smoothScroll('blog')">
                             <li class="navbar--list__item">Blog</li>
                         </a>
-                        <a href="#about">
+                        <a href="#" onclick="smoothScroll('about')">
                             <li class="navbar--list__item">who</li>
                         </a>
                     </ul>
-                </nav> -->
+                </nav>
             </div>
         </section>
 
@@ -69,12 +67,11 @@
                         </div>
                     </a>
                 </div>
-
             </section>
 
 
             <section class="section blog--section section--container" id="blog">
-         <!--        <h3 class="blog--header">
+                <!--        <h3 class="blog--header">
                     BLOG.
                 </h3> -->
                 <a href="http://morningdev.com" target="_blank">
@@ -95,10 +92,10 @@
                     <!-- <div class="about__pic--container"> --><img src="assets/me.png" alt="a picture of me" class="about__pic">
                     <!-- </div> -->
                     <div class="about__text--container">
-                        <p class="about__text__p">My name is Davide Iaiunese, I'm a meticulous self-taught developer born and raised in Caserta, Italy. Besides development, my main passion are self-impovement, cinema and books.</p>
+                        <p class="about__text__p">My name is Davide Iaiunese, I'm a meticulous self-taught developer born and raised in Caserta, Italy. Besides development, my main passions are self-improvement, cinema and books.</p>
                         <p class="about__text__p">In March 2017 I found in code the key to personal freedom. I was astonished at how it fits who I am.</p>
                         <p class="about__text__p">In September 2017 I decided to pursue a career in web development. A month later I was selected as receipt of the Google Developer scholarship - phase 1 - along with other 20.000 people.</p>
-                        <p class="about__text__p">On February 14 2018 I was lucky and grateful to be among the 1% who earned the full, six months long scholarship. It's teaching me to build responsive websites by using HTML, CSS, JavaScript and its libraries such as jQuery and React.</p>
+                        <p class="about__text__p">On February 14, 2018 I was lucky and grateful to be among the 1% who earned the full, six months-long scholarship. It's teaching me to build responsive websites by using HTML, CSS, JavaScript and its libraries such as jQuery and React.</p>
                     </div>
                     <div class="about__devicons">
                         <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" class="about__devicons--link" target="_blank">
@@ -161,22 +158,118 @@
 
 </body>
 
-<!-- <script>
-    var collapsible = document.getElementsByClassName("collapsible__title");
+<script>
+    /*    var navbarItem = document.getElementsByClassName(.navbar--list__item);
+                navbarItem.addEventListener("click", function(e) {
+                    // make sure that hash of clicked element has a value before overriding default behavior
+                    if (this.hash != "") {
+                        e.preventDefault();
 
-    for (let i = 0; i < collapsible.length; i++) {
-        collapsible[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-            console.log(this.classList);
-        });
+                        //store hash value 
+                        var hash = this.hash;
+
+                        var body = document.body;
+
+                        htmlAndBody.animate({
+                                scrollTop: hash.offset.top
+                            },
+                            800,
+                            function() {
+
+                                // add # to URL when scrolling is done
+                                window.location.hash = hash;
+                            })
+                    } // End if
+                })*/
+
+    /*    var targetOffset, currentPosition,
+        body = document.body,
+        // navbarItem = document.getElementsByClassName('navbar--list__item'),
+        navbarItem = document.getElementsByClassName('projects'),
+        animateTime = 900;
+
+    function getPageScroll() {
+        var yScroll;
+
+        if (window.pageYOffset) {
+            yScroll = window.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            yScroll = document.documentElement.scrollTop;
+        } else if (document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        return yScroll;
     }
 
-</script> -->
+    navbarItem.addEventListener('click', function(event) {
+
+        targetOffset = document.getElementById(event.target.hash.substr(1)).offsetTop;
+        currentPosition = getPageScroll();
+
+        body.classList.add('in-transition');
+        body.style.WebkitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+        body.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+        body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+
+        window.setTimeout(function() {
+            body.classList.remove('in-transition');
+            //body.style.cssText = "";
+            window.scrollTo(0, targetOffset);
+        }, animateTime);
+
+        event.preventDefault();
+
+    }, false);*/
+
+    function currentYPosition() {
+        // Firefox, Chrome, Opera, Safari
+        if (self.pageYOffset) return self.pageYOffset;
+        // Internet Explorer 6 - standards mode
+        if (document.documentElement && document.documentElement.scrollTop)
+            return document.documentElement.scrollTop;
+        // Internet Explorer 6, 7 and 8
+        if (document.body.scrollTop) return document.body.scrollTop;
+        return 0;
+    }
+
+    function elmYPosition(eID) {
+        var elm = document.getElementById(eID);
+        var y = elm.offsetTop;
+        var node = elm;
+        while (node.offsetParent && node.offsetParent != document.body) {
+            node = node.offsetParent;
+            y += node.offsetTop;
+        }
+        return y;
+    }
+
+    function smoothScroll(eID) {
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        var speed = Math.round(distance / 100);
+        //if (distance < 100) speed = 40;
+        if (speed >= 20) speed = 30;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for (var i = startY; i < stopY; i += step) {
+                setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+                leapY += step;
+                if (leapY > stopY) leapY = stopY;
+                timer++;
+            }
+            return;
+        }
+        for (var i = startY; i > stopY; i -= step) {
+            setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+            leapY -= step;
+            if (leapY < stopY) leapY = stopY;
+            timer++;
+        }
+       
+    }
+</script>
 
 </html>

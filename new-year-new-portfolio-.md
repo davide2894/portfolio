@@ -88,3 +88,9 @@ I think mobile version it's done. Now I need to make a version for tables and an
         *left: pic
         *right: description + skills
 scroll animation that changes the background color smoothly like johathan
+
+## Day 8 - Mon 12 March 2018
+6:27pm - added landing animation and smooth scroll, but there's a problem: the scroll goes to the top of the section but doesn't care of internal margins. 
+Probably the issue is to be located on .section or content classes. 
+
+Tomorrow morning I'm going to check this problem out. If it's not solved I'll leave it because I need to continue the course now, in order to meet upcoming projects deeadlines
