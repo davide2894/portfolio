@@ -76,25 +76,24 @@ project {
 
 .project__img {
     background: #f5f5f5;
-    border-radius: 6px;
 }
 
 .project__img,
-.blog--section,
+.blog__content,
 .about--section {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
 }
 
-.blog--section,
+/* .blog__content,
 .about--section {
     box-shadow: 5px 8px 12px 0 rgba(0, 0, 0, 0.2);
-}
-
-.blog--section {
+} */
+.blog__content {
     background-color: #14a098;
 }
 
-.blog--section:hover {
+.blog__content:hover {
     cursor: pointer;
     transform: translate(-2px, -2px);
     transition: .2s ease-in-out;
@@ -271,7 +270,7 @@ n
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
 .section {
-    border-radius: 2px;
+    margin: 1em 0;
 }
 .section__header {
     font-size: 2.5em;
@@ -287,11 +286,10 @@ n
     //flex-wrap: wrap;
     flex-direction: column;
     margin-top: 0;
-    height: 100vh;
+    //height: 100vh;
 }
 
-.projects--header,
-.blog--header {
+.projects--header {
     text-align: center;
     font-size: 3em;
     margin-bottom: .5em;
@@ -307,7 +305,8 @@ n
 .project__img {
     width: 100%;
 }
-.project:hover {
+.project:hover,
+.blog__content:hover{
     transform: scale(1.02);
 }
 
@@ -335,8 +334,10 @@ n
     max-width: 100%;
 }
 
+.about--section {
+    //margin: 4em 0;
+}
 .about__main--container {
-    //margin: 1em auto;
     display: flex;
     flex-direction: column;
 }
@@ -385,7 +386,6 @@ n
 
 .copyright {
     font-size: 1em;
-    color: #444;
     margin: 1em 0;
     text-align: center;
 }
@@ -430,8 +430,8 @@ n
 }
 
 @media screen and (min-width: 400px) {
-    .blog__content {
-        margin: 1em 2em;
+    .section {
+        margin: 2em 0;
     }
     .about__header {
         font-size: 3em;
@@ -446,10 +446,9 @@ n
         font-size: 4em;
     }
     .section {
-        //padding: 5em 0;
+        margin: 3em 0;
     }
     .blog__content {
-        margin: 1em 3em;
         padding: 4em 0;
     }
     .blog__header {
@@ -477,11 +476,11 @@ n
 
 
 @media screen and (min-width: 550px) {
-    .section {
-        margin: 20em 0;
+    .blog__content,
+    .about__content {
+        padding: 10em;
     }
     .blog__content {
-        //margin: 20em 0;
         padding: 5em 0;
     }
     
@@ -497,19 +496,27 @@ n
 
 @media screen and (min-width: 600px) {
     .section {
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .blog--content {
-        vertical-align: middle;
+        max-width: 600px;;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 2em auto;
     }
     .project--list {
         display: flex;
         justify-content: center;
     }
-    .about__content {
-        margin: 0 auto;
+    .projects,
+    .blog--section {
+        height: 100vh;
+    }
+    .blog--section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .blog__content {
+        vertical-align: middle;
     }
     .blog__text {
         font-size: 1.2em;
