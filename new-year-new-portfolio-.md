@@ -94,3 +94,18 @@ scroll animation that changes the background color smoothly like johathan
 Probably the issue is to be located on .section or content classes. 
 
 Tomorrow morning I'm going to check this problem out. If it's not solved I'll leave it because I need to continue the course now, in order to meet upcoming projects deeadlines
+
+## Day 9 - Thu 5/4/18
+Need to fix the link that doesn't work. 
+Fixed the link changing color when shouldn't.
+
+6:45am - now I want to make the html accessible.
+
+1:05pm - trying to add fade in on scroll. It should work but somehow it doesn't. I don't understand. Observer works. Entries are registered, class show is added but doesn't work. Could it be that it's not specific?
+So .show class gets added and removed when necessary. It works, so that shouldn't be the problem. Then it means the problem is in CSS, not JS. So CSS .show class is not specific enough?
+
+opacity is applied but show class doesn't apply.
+
+show is added but doesn't apply. Why???
+
+2:09pm - sass was probably not injecting again....Anyway: now this freaking feature is working.
