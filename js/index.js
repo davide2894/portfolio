@@ -69,7 +69,7 @@ var callback = function(entries, observer) {
             console.log("classlist entering viewport", entry.target.classList);
         } else {
             entry.target.classList.remove('show');
-            console.log("classlist exiting viewport" ,entry.target.classList);
+            console.log("classlist exiting viewport", entry.target.classList);
         }
     })
 };

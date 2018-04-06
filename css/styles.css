@@ -437,7 +437,7 @@ a:hover {
     -ms-flex: 1;
     flex: 1;
     padding: 1em;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     border-radius: 2px;
 }
@@ -567,6 +567,9 @@ a:hover {
 @media screen and (min-width: 350px) {
     .intro__text {
         font-size: 3.5em;
+    }
+    .project__btn {
+        font-size: 1.2em;
     }
     .blog__content {
         max-width: 100%;
