@@ -109,3 +109,17 @@ opacity is applied but show class doesn't apply.
 show is added but doesn't apply. Why???
 
 2:09pm - sass was probably not injecting again....Anyway: now this freaking feature is working.
+
+## Day 9 - Fri 6/4/18
+10:42am - goal: to make a portfolio project page. Now, I could 
+- make a separate page for each project
+- make a brief description with likns like maeva
+- have a card like area dedicated to each project, at the bottom show source code and visit buttons
+
+I guess the third option is the one to go. So, each project will have a card containing:
+- project mockup
+- brief description including:
+   * what is it
+   * skills used
+   * website button
+   * surce code button

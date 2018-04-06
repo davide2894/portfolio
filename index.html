@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- HEAD -->
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,9 @@
 </head>
 
 <body>
+    <!-- WEBSITE -->
     <div class="page-wrapper">
+        <!-- INTRO SECTION -->
         <section class="intro fade-in">
             <div class="intro--container" role="banner">
                 <div class="intro__text--container">
@@ -23,7 +26,7 @@
                         <p class="intro__text intro__text--l3">Developer
                         </p>
                     </a>
-    
+
                 </div>
                 <ul class="intro__icons" role="list">
                     <a class="intro__icon" href="https://github.com/davide2894" target="_blank" title="github">
@@ -32,19 +35,19 @@
                         </li>
                     </a>
 
-                    <a class="intro__icon" href="https://www.linkedin.com/in/davideiaiunese/" target="_blank" title="linkedin" >
+                    <a class="intro__icon" href="https://www.linkedin.com/in/davideiaiunese/" target="_blank" title="linkedin">
                         <li class="intro__list--item" role="listitem">
                             <i class="fa fa-linkedin icon fa-2x"></i>
                         </li>
                     </a>
 
-                    <a class="intro__icon" href="mailto:davide.iaiunese@gmail.com" title="email" >
+                    <a class="intro__icon" href="mailto:davide.iaiunese@gmail.com" title="email">
                         <li class="intro__list--item" role="listitem">
                             <i class="fa fa-envelope-square icon fa-2x"></i>
                         </li>
                     </a>
 
-                    <a class="intro__icon" href="https://twitter.com/davideiaiunese" target="_blank" title="twitter" >
+                    <a class="intro__icon" href="https://twitter.com/davideiaiunese" target="_blank" title="twitter">
                         <li class="intro__list--item" role="listitem">
                             <i class="fa fa-twitter icon fa-2x"></i>
                         </li>
@@ -54,37 +57,70 @@
 
                 <nav class="navbar" role="navigation">
                     <ul class="navbar--list" role="list">
-                        <a href="#" onclick="smoothScroll('projects')"  title="go to projects section">
+                        <a href="#" onclick="smoothScroll('projects')" title="go to projects section">
                             <li class="navbar--list__item" role="listitem">Projects</li>
                         </a>
-                        <a href="#" onclick="smoothScroll('blog')"  title="go to blog section">
+                        <a href="#" onclick="smoothScroll('blog')" title="go to blog section">
                             <li class="navbar--list__item" role="listitem">Blog</li>
                         </a>
-                        <a href="#about" onclick="smoothScroll('about')"  title="go to about section">
+                        <a href="#about" onclick="smoothScroll('about')" title="go to about section">
                             <li class="navbar--list__item" role="listitem">who</li>
                         </a>
                     </ul>
                 </nav>
             </div>
         </section>
-
+        <!-- MAIN SECTION:
+             * projects
+             * blog
+             * about
+          -->
         <main class="container--main" id="main">
-
+            <!-- PROJECTS -->
             <section class="section section--container projects" id="projects">
-                <h3 class="section__header projects--header" role="heading">
+                <h2 class="section__header projects--header" role="heading">
                     Projects.
-                </h3>
-                <ul class="projects--list" role="list">
-                    <!-- link to project page -->
-                    <a class="section__link project--link" href="https://github.com/davide2894/udacity-wall" target="_blank"  title="link to project's github page">
-                        <div class="project project--uw">
-                            <img class="section__img project__img" src="assets/uw-mockup.webp" alt="project mockup">
+                </h2>
+                <div class="projects--list" role="list" aria-label="list">
+                    <!-- UDACITY WALL -->
+                    <article class="project project--udacity-wall">
+                        
+                        <a class="section__link project--link" href="https://github.com/davide2894/udacity-wall" target="_blank" title="link to project's github page">
+                            <img class="project__img" src="assets/uw-mockup.webp" alt="Udacity Wall mockup">
+                        </a>
+                        <div class="project__text">
+                            <h3 class="project__title project__title--udacity-wall">Udacity Wall</h3>
+                            <p class="project__description">
+                                Udacity Wall is a web app where Udacity students can share their memories.
+                            </p>
+                            <p class="project__description">
+                                This is an original, open-source web app made during the Google Developer Challenge Scholarship - Front-End Dev 2017/2018.
+                            </p>
+                            <p class="project__description">Skills used:</p>
+                            <ul class="project__list">
+                                <li class="project__list__item">Version Control</li>
+                                <li class="project__list__item">HTML5</li>
+                                <li class="project__list__item">CSS3</li>
+                                <li class="project__list__item">Vanilla JavaScript</li>
+                                <li class="project__list__item">Gulp</li>
+                            </ul>
+                            <p class="project__description">Personal contribution</p>
+                            <ul class="project__list">
+                                <li class="project__list__item">created and managed project repository</li>
+                                <li class="project__list__item">supervised team work</li>
+                                <li class="project__list__item">made website responsive: built mobile, tablet and desktop version</li>
+                            </ul>
+                            <div class="project__buttons">
+                                <a href="https://brushed.it" class="project__btn project__visit" target="_blank">Website</a>
+                                <a href="https://github.com/davide2894/udacity-wall" class="project__btn project__source-code" target="_blank">Source code</a>
+                            </div>
                         </div>
-                    </a>
-                </ul>
+
+                    </article>
+                </div>
             </section>
 
-
+            <!-- BLOG -->
             <section class="section blog--section" id="blog">
                 <!--        <h3 class="blog--header">
                     BLOG.
@@ -102,6 +138,7 @@
                 </div>
             </section>
 
+            <!-- ABOUT -->
             <section class="section about--section" id="about">
                 <div class="container about--container">
                     <h3 class="about__header">The person behind this</h3>
@@ -168,11 +205,12 @@
 
         </main>
 
+        <!-- FOOTER -->
         <footer class="footer footer-contaienr">
             <p class="copyright"><span role="img">&copy;</span>2018 Davide Iaiunese</p>
         </footer>
     </div>
-    
+    <!-- END OF WEBSITE -->
     <!-- JAVASCRIPT -->
     <script src="js/index.js"></script>
 </body>
