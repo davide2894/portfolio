@@ -20,11 +20,9 @@ body,
     transition: transform 800ms ease, -webkit-transform 800ms ease;
 }
 
-
 ul {
     list-style: inside;
 }
-
 
 /*
     -----------------------------------------
@@ -74,10 +72,6 @@ body {
 
 .intro__icon:nth-child(odd) {
     color: #000;
-}
-
-project {
-    background-color: #f5f5f5;
 }
 
 .project__img {
@@ -156,7 +150,6 @@ project {
 a,
 a:active,
 a:visited,
-a:focus,
 a:hover {
     text-decoration: none;
     color: #005073;
@@ -272,6 +265,24 @@ a:hover {
     flex-direction: column;
     margin: auto;
 }
+
+/*
+.intro__text:focus,
+.intro__icons:focus,
+.intro__icon:focus,
+.intro__{
+*/
+
+.intro__text--container:focus-within,
+h3:focus,
+.blog--container:focus-within,
+h3.about__header:focus-within,
+:focus {
+    outline: 1px solid #000;
+    -webkit-box-shadow: 0px 3px 20px 8px rgba(0, 80, 115, 1);
+    -moz-box-shadow: 0px 3px 20px 8px rgba(0, 80, 115, 1);
+    box-shadow: 0px 3px 20px 8px rgba(0, 80, 115, 1);
+}                
 
 .intro__text {
     text-transform: uppercase;
@@ -422,11 +433,6 @@ a:hover {
 .project__description:nth-of-type(3),
 .project__description:last-of-type {
     margin-bottom: 0;
-}
-
-.project__description--personal-contribution,
-.project__description--skills-used {
-    font-weight: 600;
 }
 
 .project__buttons {

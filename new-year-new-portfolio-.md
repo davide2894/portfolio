@@ -130,3 +130,5 @@ I guess the third option is the one to go. So, each project will have a card con
 
 6:20am - solved. Problem was lack of margin-top on header.
 Now I should handle the about section icons' position.
+
+11:58am - guess now website has good accessibility. Need to add noticeable focus for blog and project sections
