@@ -54,8 +54,6 @@ function smoothScroll(eID) {
     Fade in section on scroll down
 */
 
-const main = document.getElementById('main');
-
 // handle intersect
 var callback = function(entries, observer) {
     
@@ -75,6 +73,8 @@ var callback = function(entries, observer) {
 };
 
 var observer =  new IntersectionObserver(callback, { });
+
+const main = document.getElementById('main');
 
 // declare target
 var sections = main.getElementsByClassName('section');

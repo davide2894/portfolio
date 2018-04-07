@@ -124,9 +124,11 @@ project {
     background-color: #DC0058;
 }
 
+/*
 .skills {
     background: #FFE0E1;
 }
+*/
 
 /*
     -----------------------------------------
@@ -136,10 +138,12 @@ project {
     -----------------------------------------
 */
 
+/*
 .contacts,
 .linkedin {
     max-width: 2em;
 }
+*/
 
 /*
     -----------------------------------------
@@ -167,12 +171,14 @@ a:hover {
     cursor: pointer;
 }
 
+/*
 .fa:hover {
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
+*/
 
 .navbar--list__item:before {
     content: "";
@@ -325,11 +331,6 @@ a:hover {
     font-weight: 600;
 }
 
-.content--about__text,
-.footer--content__text {
-    font-family: 'Bree Serif', serif;
-}
-
 /*
     -------------- MAIN SECTION
 */
@@ -340,7 +341,7 @@ a:hover {
 }
 
 .section {
-    margin: 1em 0;
+    margin: 4em 0;
     opacity: 0;
 }
 
@@ -368,6 +369,7 @@ a:hover {
     text-align: center;
     font-size: 3em;
     margin-bottom: .5em;
+    margin-top: .1em;
 }
 
 .projects--list {
@@ -380,16 +382,8 @@ a:hover {
     color: #333;
 }
 
-.project {
-    overflow: hidden;
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
-    width: 500px;
-}
-
 .project__img {
     max-width: 100%;
-    background-color: #1B4093;
     background-color: #005073;
     padding: 1em;
 }
@@ -422,7 +416,17 @@ a:hover {
 }
 
 .project__description {
-    margin: 0.5em 0;
+    margin: 1em 0;
+}
+
+.project__description:nth-of-type(3),
+.project__description:last-of-type {
+    margin-bottom: 0;
+}
+
+.project__description--personal-contribution,
+.project__description--skills-used {
+    font-weight: 600;
 }
 
 .project__buttons {
@@ -526,6 +530,7 @@ a:hover {
 
 .about__text--container {
     font-size: 1.2em;
+    padding: 1em;
 }
 
 .about__text__p {
@@ -537,12 +542,18 @@ a:hover {
 }
 
 .about__devicons {
-    margin: 2em .4em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.devicons__row {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
 }
 
 .devicons__icon {
-    margin-top: 2em;
-    margin: 1.5em .9em;
     width: 3em;
 }
 
@@ -580,21 +591,14 @@ a:hover {
     }
     .about__text--container {
         text-align: justify;
-        margin: 1.2em 1.5em;
-    }
-    .devicons__icon {
-        margin: 1.5em 1.1em;
+
     }
 }
 
+/*
 @media screen and (min-width: 380px) {
-    .about__devicons {
-        margin: 2em .4em;
-    }
-    .devicons__icon {
-        margin: 1.5em 1.5em;
-    }
 }
+*/
 
 @media screen and (min-width: 400px) {
     .section {
@@ -602,9 +606,6 @@ a:hover {
     }
     .about__header {
         font-size: 3em;
-    }
-    .devicons__icon {
-        margin: 1.5em 1.8em;
     }
 }
 
@@ -618,26 +619,19 @@ a:hover {
     .blog__content {
         padding: 4em 0;
     }
-    .blog__header {
-        font-size: 2.8em;
-    }
-    .devicons__icon {
-        margin: 1.5em 2.3em;
-    }
 }
 
+/*
 @media screen and (min-width: 470px) {
-    .devicons__icon {
-        margin: 1.5em 2.5em;
-    }
 }
+*/
 
 @media screen and (min-width: 500px) {
     .intro__text {
         font-size: 4.5em;
     }
-    .devicons__icon {
-        margin: 1.5em 2.8em;
+    .devicons__row {
+        margin: 2em 0;
     }
 }
 
@@ -648,13 +642,6 @@ a:hover {
     }
     .blog__content {
         padding: 5em 0;
-    }
-    .about__devicons {
-        margin: 2em auto;
-        max-width: 600px;
-    }
-    .devicons__icon {
-        margin: 1.5em 3.9em;
     }
 }
 
@@ -671,15 +658,7 @@ a:hover {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        margin: 2em auto;
-    }
-    .project--list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        margin: 3em auto;
     }
     .blog--section {
         display: -webkit-box;
@@ -698,5 +677,9 @@ a:hover {
     }
     .blog__text {
         font-size: 1.2em;
+    }
+
+    .devicons__row {
+        margin: 3em 0;
     }
 }

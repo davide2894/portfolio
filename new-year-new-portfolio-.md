@@ -123,3 +123,10 @@ I guess the third option is the one to go. So, each project will have a card con
    * skills used
    * website button
    * surce code button
+
+
+## Day 10 - Sat 7/4/18
+5:46am - for some reason, on small/mdium screens observer doesn't notice projects section entrance in the viewport
+
+6:20am - solved. Problem was lack of margin-top on header.
+Now I should handle the about section icons' position.
